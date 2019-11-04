@@ -238,7 +238,15 @@ class App extends React.Component {
           height: "100vh",
           width: "100vw"
         }}
-      ></Map>
+      >
+        <GeoJSONLayer
+          data={data}
+          fillPaint={{
+            "fill-color": "#00FF00",
+            "fill-opacity": 0.3
+          }}
+        />
+      </Map>
     );
   }
 }
