@@ -2,7 +2,7 @@ import React from "react";
 import ReactMapboxGl, { GeoJSONLayer } from "react-mapbox-gl";
 import logo from "./logo.svg";
 import "./App.css";
-
+const data = require("./brooklyGeoJSON.json");
 // https://geo.nyu.edu/catalog/nyu-2451-34510
 const Map = ReactMapboxGl({
   accessToken:
@@ -10,6 +10,7 @@ const Map = ReactMapboxGl({
 });
 class App extends React.Component {
   render() {
+    console.log(data.features[0]);
     return (
       <Map
         center={[-73.944534, 40.6454199]}
